@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul><!-- list of menue -->
+
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hi, I'm <span>Hermela</span><br>Michael</h1>
+        </div>
+    </div>
+</div>
+<!-----------about----------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2"></div>
+            <h1 class="sub-title">About Me</h1>
+            <p>    
+                
+                
+            </p>
+
+            <div class="tab-title">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('expereince')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                    <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                    <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                </ul>
+            </div>
+            <div class="tab-contents active-tab" id="education">
+                <ul>
+                    <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                    <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                    <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----services-->
+
+<div id ="services">
+    <div class = "container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>
+
+                </p>
+
+                <a href="#"></a>
+            </div>
+            <div>
+                <h2>Web Design</h2>
+                <p>
+
+                </p>
+
+                <a href="#"></a>
+            </div>
+            <div>
+                <h2>Web Design</h2>
+                <p>
+
+                </p>
+
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------portfolio ---------->
+<div id="portfoilio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---contacts---->
+<div id="contacts">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>hermelaamichael@gmail.com</p>
+                <p>3463104883</p>
+                <div class="social-icons">
+                    <a href=""></a> <!---add icons later-->
+                </div>
+            </div>
+            <div class="contact-right">
+                <form >
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <buttom type="submit" >Submit</buttom>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+var tablink = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab")
+}
+
+</script>
+
+</body>
+</html>
